@@ -1,9 +1,10 @@
 import fs from "fs";
 import { join } from "path";
 import archiver from "archiver";
+import { compressedFilesPath } from "../../config.js";
 
 export const compressZipController = async (req, res) => {
-    const folderImagesPath = "src/public/filesCompressed"
+    const folderImagesPath = compressedFilesPath;
   try {
     const output = fs.createWriteStream(
       "src/public/filesCompressed" + "/images.zip"
