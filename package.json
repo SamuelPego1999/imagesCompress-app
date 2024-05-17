@@ -5,7 +5,7 @@
   "main": "src/index.js",
   "type": "module",
   "scripts": {
-    "start": "src/index.js",
+    "start": "node src/index.js",
     "extensions": "nodemon src/index.js -e js,njk,json,html,css"
   },
   "author": "samuel pego",
