@@ -1,0 +1,25 @@
+{
+  "name": "multi-tool",
+  "version": "1.0.0",
+  "description": "app with some variables tools",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon src/index.js",
+    "extensions": "nodemon src/index.js -e js,njk,json,html,css"
+  },
+  "author": "samuel pego",
+  "license": "ISC",
+  "dependencies": {
+    "archiver": "^7.0.1",
+    "bootstrap": "^5.3.3",
+    "bootstrap-icons": "^1.11.3",
+    "express": "^4.19.2",
+    "express-fileupload": "^1.5.0",
+    "nunjucks": "^3.2.4",
+    "sharp": "^0.33.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
