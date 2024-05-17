@@ -1,4 +1,5 @@
 import express, { json, urlencoded } from "express"
+import { PORT } from "../config.js";
 import {dirname, join} from "path"
 import { fileURLToPath } from "url";
 import nunjucks from "nunjucks";
@@ -22,6 +23,6 @@ app.use(routerPost)
 
 
 
-app.listen(3000,()=> {
-    console.log("app listen on port 3000" )
+app.listen(PORT,()=> {
+    console.log("app listen on port" + PORT )
 }) 
