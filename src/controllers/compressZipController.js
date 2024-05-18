@@ -1,7 +1,7 @@
 import fs from "fs";
 import { join } from "path";
 import archiver from "archiver";
-import { compressedFilesPath } from "../../config";
+import { compressedFilesPath } from "../../config.js";
 
 export const compressZipController = async (req, res) => {
     const folderImagesPath = compressedFilesPath;
