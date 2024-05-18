@@ -1,7 +1,7 @@
 import { EventEmitter } from "events";
 import fs from "fs/promises";
 import { join } from "path";
-import { compressedFilesPath } from "../../config.js";
+import { compressedFilesPath } from "../../../config.js";
 
 
 const customEmitter = new EventEmitter();
