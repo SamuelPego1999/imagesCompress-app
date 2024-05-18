@@ -1,7 +1,7 @@
 import fs from "fs";
 import { join } from "path";
 import archiver from "archiver";
-import { compressedFilesPath } from "../../../config.js";
+import { compressedFilesPath } from "../../config.js";
 
 export const compressZipController = async (req, res) => {
     const folderImagesPath = compressedFilesPath;
@@ -13,7 +13,7 @@ export const compressZipController = async (req, res) => {
     const folderContent = fs.readdirSync(folderImagesPath);
     for (let file of folderContent) {
         if (file.includes(".zip")){ 
-          continue
+          continue;
         }
         else {
             archive.file(join(folderImagesPath,file),{name:file})
