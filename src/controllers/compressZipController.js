@@ -7,7 +7,7 @@ export const compressZipController = async (req, res) => {
     const folderImagesPath = compressedFilesPath;
   try {
     const output = fs.createWriteStream(
-      "src/public/filesCompressed" + "/images.zip"
+      folderImagesPath + "/images.zip"
     );
     const archive = archiver("zip", { zlib: { level: 9 } });
     const folderContent = fs.readdirSync(folderImagesPath);
