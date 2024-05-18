@@ -8,7 +8,13 @@ const customEmitter = new EventEmitter();
 export const cleanupEvent = customEmitter.on("cleanupFolder", async () => {
   const folderPath = compressedFilesPath;
   const folderContent = await fs.readdir(folderPath);
-  folderContent.forEach(async (file) => {
-    await fs.unlink(join(folderPath, file));
-  });
+  
+    for (let file of folderContent) {
+    
+    if (file.includes(".gitkeep")) {
+      continue;
+    }
+    else {
+    await fs.unlink(join(folderPath, file))}
+  }
 });
