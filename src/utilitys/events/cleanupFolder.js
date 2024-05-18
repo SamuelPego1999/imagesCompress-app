@@ -9,7 +9,6 @@ export const cleanupEvent = customEmitter.on("cleanupFolder", async () => {
   const folderPath = compressedFilesPath;
   const folderContent = await fs.readdir(folderPath);
   folderContent.forEach(async (file) => {
-    console.log(file);
     await fs.unlink(join(folderPath, file));
   });
 });
