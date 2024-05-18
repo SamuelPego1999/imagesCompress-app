@@ -2,7 +2,7 @@ import sharp from "sharp";
 import fs from "fs/promises";
 import { join } from "path";
 import { cleanupEvent } from "../utilitys/events/cleanupFolder.js";
-import { compressedFilesPath } from "../../config.js";
+import { compressedFilesPath } from "../../../config.js";
 
 export const commpressController = async (req, res) => {
   try {
