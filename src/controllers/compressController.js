@@ -6,7 +6,7 @@ import { compressedFilesPath } from "../../config.js";
 
 export const commpressController = async (req, res) => {
   try {
-    cleanupEvent.emit("cleanupFolder")
+    // cleanupEvent.emit("cleanupFolder")
     const { format, quality } = req.body;
     const files = req.files["files[]"];
     const outputFolder = compressedFilesPath;
