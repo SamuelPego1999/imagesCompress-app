@@ -12,7 +12,7 @@ export const compressZipController = async (req, res) => {
     const archive = archiver("zip", { zlib: { level: 9 } });
     const folderContent = fs.readdirSync(folderImagesPath);
     for (let file of folderContent) {
-        if (file.includes(".zip")){ 
+        if (file.includes(".zip") || file.includes(".gitkeep")){ 
           continue;
         }
         else {
